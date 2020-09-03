@@ -35,14 +35,21 @@ let longestCommonPrefix = (strs) => {
 
   // For each letter in the comparison word
   for (let i = 0; i < comparisonWord.length; i++) {
+    // Store the comparison word letter at the current index
     let comparisonLetter = comparisonWord.charAt(i);
+    // Cycle through the array of words from index 1 (next word after comparison word)
     for (let j = 1; j < strs.length; j++) {
+      // Store the current word
       let currentWord = strs[j];
+      // Get the letter at the current comparison position for the current word
       let currentLetter = currentWord.charAt(i);
+      // If the current comparison position is longer than the current word or
+      // the comparison letter doesn't equal the current letter, exit
       if (i > currentWord.length || comparisonLetter !== currentLetter) {
         return longest;
       }
     }
+    // Add the correctly comparable letter to the longest string.
     longest += comparisonLetter;
   }
 
