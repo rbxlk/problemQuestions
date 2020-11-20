@@ -34,4 +34,4 @@ var searchInsert = function(nums, target) {
 
 console.log( searchInsert([1,3,5,6], 4));
 
-// Answer used Binary Search to serach through a sorted array of numbers
+// Answer used Binary Search to search through a sorted array of numbers
